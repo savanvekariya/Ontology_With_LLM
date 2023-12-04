@@ -1,0 +1,18 @@
+Please categorize the specified entity into the most fitting category from the list below. Each entity should only be assigned to one single category that best describes its nature or function. If the entity does not correspond to any of the categories listed, leave the classification blank.
+
+Categories:
+
+system: A system is a set of interconnected components or subsystems that include at least one sensor, one controller, and one actuator, as per ISO 26262.
+component: A component, as defined by ISO 26262, is a non-system level element that is separable and consists of multiple hardware parts or software units.
+hardware component: A hardware component is a non-system level element comprising more than one hardware part, as per ISO 26262.
+hardware part: A hardware part is a segment of a hardware component, representing the first level of hierarchical decomposition according to ISO 26262.
+hardware subpart: A hardware subpart is a division of a hardware part, signifying the second or higher level of hierarchical decomposition.
+function: A function is an activity or role that a system, component, or software/hardware element fulfills.
+software: Software, as per the definition, refers to an element that is exclusively a part of the software domain and is executed by a processing unit.
+quantity: A quantity represents a measurable aspect of a phenomenon, such as length, mass, or time, classified by its metrological aspect.
+measure: A measure is a quality representing amounts of quantities.
+unit: A unit is a standard used for comparison in measurements.
+
+Entity: $prompt
+Assigned Category: 
+

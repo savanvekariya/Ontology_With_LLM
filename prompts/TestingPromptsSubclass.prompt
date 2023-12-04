@@ -1,0 +1,22 @@
+Given entity, which belongs to one of the given classes.   
+component
+function
+hardware component
+hardware part
+hardware subpart
+measure
+quantity
+software
+system
+unit
+person
+objects
+place
+organisation
+
+If entity does not belong to any of the given classes, then do not provide anything. 
+
+Entity: $prompt
+class: 
+
+

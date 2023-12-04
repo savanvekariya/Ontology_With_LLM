@@ -1,0 +1,28 @@
+As a knowledge graph expert, your task is to extract all possible meaningful triplets from a given sentence following a specific schema. 
+The schema defines triplets in the format { head : ENTITY 1, realation : RELATIONSHIP, tail : ENTITY 2 } .
+Keeping in mind that ENTITY should not be more than three words and should not include articles such as 'a', 'an', or 'the'. ENTITY should not contain verb.
+ENTITY has to be subclass of ["benefits","development stage","disruption","embodiment","improvement","innovation","innovator","need","problem","symptom","usage"].
+RELATION has to be one of  ["has developed","has development stage","fullfills","solves","case disruption","has benefit","has improvement", "embodied by", "has usage", "manifested by", "has symptom"]
+
+The RELATIONSHIP signifies the relationship between these entities.
+The relationships are defined between two classes of entities, Class I (the subject) and Class II (the object). The relationship or predicate describes the connection between these two entities. Relation should be one of the following.
+Class I (Subject) -> Relation (Predicate) -> Class II (Object)
+innovator -> has developed -> innovation
+innovation -> has development stage -> development stage
+innovation -> fullfills -> need
+innovation -> solves -> problem
+problem -> has symptom -> symptom
+innovation -> case disruption -> disruption
+innovation -> has benefit -> benefits
+innovation -> has improvement -> improvement
+innovation -> embodied by -> embodiment
+embodiment -> has usage -> usage
+need -> manifested by -> problem
+
+Sentence:  Blockchain technology, embodied by cryptocurrency, causes disruption in the banking sector and is used for digital transactions.
+Triplet: [{"head": "Blockchain technology", "relation": "causes disruption", "tail": "banking sector"},
+{"head": "Cryptocurrency", "relation": "embodied by", "tail": "Blockchain technology"},
+{"head": "Cryptocurrency", "relation": "has usage", "tail": "digital transactions"}]
+
+Sentence: $prompt
+Triplet:

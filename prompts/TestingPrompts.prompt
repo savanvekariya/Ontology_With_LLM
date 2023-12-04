@@ -1,0 +1,37 @@
+As a knowledge graph expert, your task is to extract all possible meaningful triplets from a given sentence following a specific schema. 
+The schema defines triplets in the format { head : ENTITY 1, realation : RELATIONSHIP, tail : ENTITY 2 } .
+
+ENTITY has to be subclass of ["component","function","hardware component","hardware part","hardware subpart","measure","quantity","software","system","unit"].
+
+RELATION has to be one of  ["has part directly","implements","executes","part of directly","has Property","has value","has unit"]
+
+The RELATIONSHIP signifies the relationship between these entities.
+The relationships are defined between two classes of entities, Class I (the subject) and Class II (the object). The relationship or predicate describes the connection between these two entities. Relation should be one of the following.
+Class I (Subject) -> Relation (Predicate) -> Class II (Object)
+system -> has part directly -> component
+hardware component -> has part directly -> hardware part
+component -> implements -> function
+hardware component -> implements -> function
+hardware part -> implements -> function
+hardware subpart -> implements -> function
+software -> implements -> function
+system -> implements -> function
+processing unit -> executes -> software
+hardware subpart -> part of directly -> hardware part
+component -> has Property -> quantity
+hardware component -> has Property -> quantity
+hardware part -> has Property -> quantity
+hardware subpart -> has Property -> quantity
+software -> has Property -> quantity
+system -> has Property -> quantity
+processing unit -> executes -> software
+quantity -> has value -> measure
+measure -> has unit -> unit
+
+Sentence: A central processing unit ( CPU ) , also called a central processor , main processor or just processor , is the electronic circuitry that executes instructions comprising a computer program .
+Triplet:[{ "head": "central processing unit", "relation": "executes", "tail": "instructions" },
+{ "head": "instructions", "relation": "part of directly", "tail": "computer program" },
+{ "head": "central processing unit", "relation": "has Property", "tail": "electronic circuitry" }]
+
+Sentence: $prompt
+Triplet:

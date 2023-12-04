@@ -1,0 +1,35 @@
+Given prompt, replace the relation to one of the following: 
+has part directly
+implements
+executes
+part of directly
+has Property
+has value
+has unit
+
+The relationships are defined between two classes of entities, Class I (the subject) and Class II (the object). The relationship or predicate describes the connection between these two entities. Relation should be one of the following.
+Class I (Subject) -> Relation (Predicate) -> Class II (Object)
+system -> has part directly -> component
+hardware component -> has part directly -> hardware part
+component -> implements -> function
+hardware component -> implements -> function
+hardware part -> implements -> function
+hardware subpart -> implements -> function
+software -> implements -> function
+system -> implements -> function
+processing unit -> executes -> software
+hardware subpart -> part of directly -> hardware part
+component -> has Property -> quantity
+hardware component -> has Property -> quantity
+hardware part -> has Property -> quantity
+hardware subpart -> has Property -> quantity
+software -> has Property -> quantity
+system -> has Property -> quantity
+processing unit -> executes -> software
+quantity -> has value -> measure
+measure -> has unit -> unit
+
+prompt: $prompt
+updates:
+
+

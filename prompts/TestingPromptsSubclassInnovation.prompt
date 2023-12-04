@@ -1,0 +1,18 @@
+Please categorize the specified entity into the most fitting class from the list below. Each entity should only be assigned to one single class that best describes its nature or function. If the entity does not correspond to any of the classes listed, leave the classification blank.
+
+Classes:
+benefits
+development stage
+disruption
+embodiment
+improvement
+innovation
+innovator
+need
+problem
+symptom
+usage
+
+Entity: $prompt
+Assigned class: 
+
